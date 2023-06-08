@@ -14,11 +14,9 @@ footer {
   align-items: center;
 }
 
-.footer-icons_img{
-    width: 30px
+.footer-icons_img {
+  width: 30px;
 }
-
-
 
 .footer-icons {
   font-size: 10px;
@@ -26,16 +24,34 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:0 15px 0 15px;
+  margin: 0 15px 0 15px;
   cursor: pointer;
 }
-.footer-icons__desc{
-    margin-top: 5px;
-    font-weight: bold;
-    transform: scale(0.8)
+.footer-icons__desc {
+  margin-top: 5px;
+  font-weight: bold;
+  transform: scale(0.8);
+}
 
+@keyframes icons-float {
+  0% {
+    transform: translateY(10px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .footer-icons__img {
   width: 30px;
+}
+
+.footer-icons:hover .footer-icons__img {
+  animation: 2s icons-float;
 }
